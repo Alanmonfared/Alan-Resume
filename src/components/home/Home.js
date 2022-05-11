@@ -15,7 +15,7 @@ import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
 import DownloadIcon from "@mui/icons-material/Download";
 // import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
-import Smoke from '../../media/blueSmoke.mp4'
+import Smoke from "../../media/blueSmoke.mp4";
 let theme = createTheme();
 theme = responsiveFontSizes(theme);
 
@@ -32,74 +32,74 @@ export default function Home() {
   return (
     <ContainerHome>
       <Box sx={{ zIndex: 1 }} component="div" animation="wave">
-        <ThemeProvider theme={theme}>
-          <Typography variant="h6" gutterBottom sx={{ color: "#64ffda" }}>
-            {t("home_text")}
-          </Typography>
+        Box
+        <Box sx={{backgroundColor:"#00000080", padding:"2rem"}}>
+          <ThemeProvider theme={theme}>
+            <Typography variant="h6" gutterBottom sx={{ color: "#64ffda" }}>
+              {t("home_text")}
+            </Typography>
 
-          <Typography
-            variant="h2"
-            gutterBottom
-            component="div"
-            sx={{ color: "#ccd6f6" }}
-          >
-            {t("my_name", { name: userName })}
-          </Typography>
+            <Typography
+              variant="h2"
+              gutterBottom
+              component="div"
+              sx={{ color: "#ccd6f6" }}
+            >
+              {t("my_name", { name: userName })}
+            </Typography>
 
-          <Typography variant="h4" gutterBottom sx={{ color: "#8892b0" }}>
-            {t("home_curious")}
-          </Typography>
-          <Typography variant="p" gutterBottom sx={{ color: "#4f5c76" }}>
-            {t("home_all")}
-          </Typography>
-          <Stack
-            sx={{ pt: 4 }}
-            direction="row"
-            spacing={2}
-            justifyContent="start"
-          >
-            <Button
-              to="#"
-              onClick={() => (window.location = "mailto:alan.a@live.se")}
-              component={Link}
-              variant="outlined"
-              endIcon={<SendIcon />}
+            <Typography variant="h4" gutterBottom sx={{ color: "#8892b0" }}>
+              {t("home_curious")}
+            </Typography>
+            <Typography variant="p" gutterBottom sx={{ color:"#ccd6f6"}}>
+              {t("home_all")}
+            </Typography>
+            <Stack
+              sx={{ pt: 4 }}
+              direction="row"
+              spacing={2}
+              justifyContent="start"
             >
-              {t("btn_contact")}
-            </Button>
-            <Button
-              to="#"
-              onClick={downloadFile}
-              component={Link}
-              variant="outlined"
-              endIcon={<DownloadIcon />}
-            >
-              {t("btn_cv")}
-            </Button>
-          </Stack>
-        </ThemeProvider>
-     
+              <Button
+                to="#"
+                onClick={() => (window.location = "mailto:alan.a@live.se")}
+                component={Link}
+                variant="outlined"
+                endIcon={<SendIcon />}
+              >
+                {t("btn_contact")}
+              </Button>
+              <Button
+                to="#"
+                onClick={downloadFile}
+                component={Link}
+                variant="outlined"
+                endIcon={<DownloadIcon />}
+              >
+                {t("btn_cv")}
+              </Button>
+            </Stack>
+          </ThemeProvider>
+        </Box>
         <div>
-        <h1>dd</h1>
-        <video
-          style={{
-            position: "absolute",
-            width: "100%",
-            left: "50%",
-            top: "50%",
-            height: "100%",
-            objectFit: "cover",
-            transform: "translate(-50%, -50%)",
-            zIndex: "-1",
-          }}
-          autoPlay
-          // loop
-          muted
-        >
-          <source src={Smoke} />
-        </video>
-      </div>
-     
+          <video
+            style={{
+              position: "absolute",
+              width: "100%",
+              left: "50%",
+              top: "50%",
+              height: "100%",
+              objectFit: "cover",
+              transform: "translate(-50%, -50%)",
+              zIndex: "-1",
+            }}
+            autoPlay
+            // loop
+            muted
+          >
+            <source src={Smoke} />
+          </video>
+        </div>
       </Box>
       {/* <ImgBox>
         <img

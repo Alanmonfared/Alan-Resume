@@ -114,7 +114,7 @@ export default function Erfarenhet() {
               </Card>
               <Card
                 sx={{
-                  margin: "3rem",
+                  // margin: "1rem",
                   backgroundColor: "transparent",
                   color: "#8892b0",
                   "&:hover": {

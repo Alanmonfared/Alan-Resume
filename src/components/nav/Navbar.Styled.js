@@ -4,7 +4,7 @@ export const Nav = styled.nav`
   /* background-image: linear-gradient(to right, #fff 0%, black 100%); */
   position: sticky;
   padding-top: 2rem;
-  /* background-image: linear-gradient(to right, #252525 0%, black 100%); */
+  background-image: linear-gradient(to right, #252525 0%, #0000008f 1%);
 
   height: auto;
   width: 100%;
