@@ -15,6 +15,7 @@ import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
 import DownloadIcon from "@mui/icons-material/Download";
 // import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
+import Smoke from '../../media/blueSmoke.mp4'
 let theme = createTheme();
 theme = responsiveFontSizes(theme);
 
@@ -77,13 +78,35 @@ export default function Home() {
             </Button>
           </Stack>
         </ThemeProvider>
+     
+        <div>
+        <h1>dd</h1>
+        <video
+          style={{
+            position: "absolute",
+            width: "100%",
+            left: "50%",
+            top: "50%",
+            height: "100%",
+            objectFit: "cover",
+            transform: "translate(-50%, -50%)",
+            zIndex: "-1",
+          }}
+          autoPlay
+          // loop
+          muted
+        >
+          <source src={Smoke} />
+        </video>
+      </div>
+     
       </Box>
-      <ImgBox>
+      {/* <ImgBox>
         <img
           src={require("../../image/imgbin_portable-network-graphics-desktop-smoke-png@2x.png")}
           alt="logo"
         />
-      </ImgBox>
+      </ImgBox> */}
     </ContainerHome>
   );
 }
